@@ -31,7 +31,7 @@ sudo chown -R 变更后的用户名: ./node_modulesv
 
 ---
 
-##ngrok
+## ngrok
 
 **ngrok dial tcp: lookup localhost: no such host**
 
@@ -44,7 +44,7 @@ ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:3030"
 
 ---
 
-##other
+## other
 
 **Provisional headers are shown**
 
@@ -52,3 +52,48 @@ ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:3030"
 
 解决：关闭Adblockc插件
 
+---
+
+## Sublime text
+
+**Apparent recursion within a with_prototype action: 25000 context sanity limit hit**
+
+描述：打开Sublime Text弹出该错误弹窗
+
+解决：升级Sublime Text
+
+## Vue
+
+**打开chrome dev tool无法使用vue调试插件**
+
+描述：
+无法使用vue调试插件分两种情况：
+1.右上角vue logo为灰色
+2.右上角vue logo变量，显示Vue.js is detected on this page. Open DevTools and look for the Vue panel，但chrome dev tool没有显示vue插件
+
+解决：
+1.项目运行环境不为production环境才能使用vue调试插件
+2.如在运行模式非production环境，请确定是否使用了vue.min.js，使用vue.min.js为production环境
+3.使用Vue.config.devtools = true可开启vue调试插件
+4.进行以上操作后chrome dev tool仍无vue插件显示，请关闭重启chrome dev tool
+
+## Node.js
+
+**Converting circular structure to JSON**
+
+描述：在路由内请求其他接口的数据，将返回的数据返回路由时，保此错
+
+解决：
+应直接返回数据，而且请求的promise，如res.data
+
+## Git
+
+**refusing to merge unrelated histories**
+
+描述：当本地项目绑定远程仓库后，pull远程代码时，拉取失败，且提示该错误。
+
+解决：当新绑定远程仓库，本地项目历史代码和远程仓库的历史代码不相同，需要手动同意不同历史代码合并
+
+```bash
+git pull origin master --allow-unrelated-histories
+```
