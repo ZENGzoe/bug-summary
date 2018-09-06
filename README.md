@@ -39,7 +39,7 @@ sudo chown -R 变更后的用户名: ./node_modulesv
 
 解决：运行方式改为：
 ```bash
-ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:3030"
+ngrok http 127.0.0.1:3030 -host-header="127.0.0.1:3030"
 ```
 
 ---
