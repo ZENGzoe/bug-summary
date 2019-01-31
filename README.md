@@ -97,3 +97,19 @@ ngrok http 127.0.0.1:3030 -host-header="127.0.0.1:3030"
 ```bash
 git pull origin master --allow-unrelated-histories
 ```
+
+## Hexo
+
+**全局安装hexo-cli时安装失败，提示no such file or directory, chmod '/usr/local/lib/node_modules/hexo-cli/node_modules/atob/bin/atob.js**
+
+描述：用户权限问题导致无法安装
+
+解决：
+
+设置用户的npm权限
+
+```bash
+npm config set user 0
+npm config set unsafe-perm true
+npm install -g hexo-cli
+```
