@@ -113,3 +113,10 @@ npm config set user 0
 npm config set unsafe-perm true
 npm install -g hexo-cli
 ```
+
+**No layout: index.html**
+
+描述：运行`hexo s`预览页面白屏，并且命令窗口显示No layout: index.html
+
+解决：博客主题配置错误或是主题package丢失的原因。可直接下载主题package到本地，复制到内容到`/themes/{主题包名}/`下。
+
