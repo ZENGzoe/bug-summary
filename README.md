@@ -98,6 +98,14 @@ ngrok http 127.0.0.1:3030 -host-header="127.0.0.1:3030"
 git pull origin master --allow-unrelated-histories
 ```
 
+**Authentication failed. You may not have permission to access the repository. Open options and verify that you're signed in with an account that has permission to access this repository**
+
+描述：在Github Desktop提交新项目代码时，提交失败，且提示该错误。
+
+解决：由于在本地未给github设置ssh，因此设置中不能使用ssh提交代码，应用https地址
+
+Github Desktop -> Repository -> Repository Settings -> Remote Repository URL 改为https的地址
+
 ## Hexo
 
 **全局安装hexo-cli时安装失败，提示no such file or directory, chmod '/usr/local/lib/node_modules/hexo-cli/node_modules/atob/bin/atob.js**
@@ -119,4 +127,18 @@ npm install -g hexo-cli
 描述：运行`hexo s`预览页面白屏，并且命令窗口显示No layout: index.html
 
 解决：博客主题配置错误或是主题package丢失的原因。可直接下载主题package到本地，复制到内容到`/themes/{主题包名}/`下。
+
+## Sequelize.js
+
+**1.Error: Please install mysql package manually**
+
+描述：初始化数据库时无法初始化，提示需安装mysql
+
+解决：
+
+需要全局安装mysql
+
+```
+npm install mysql -g
+```
 
