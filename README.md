@@ -142,3 +142,25 @@ npm install -g hexo-cli
 npm install mysql -g
 ```
 
+## MySQL
+
+**1.Client does not support authentication protocol requested by server; consider upgrading MySQL client**
+
+描述：数据库连接失败
+
+解决：密码错误，需要更改密码
+
+（1）更改加密方式
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
+```
+
+（2）更改密码
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123';
+```
+
+（3）刷新
+```
+FLUSH PRIVILEGES;
+```
